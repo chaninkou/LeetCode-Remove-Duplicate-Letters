@@ -30,7 +30,7 @@ public class RemoveDuplicatesLetters {
                 continue;
             }
             
-            // conditions
+            // conditions to remove and marked visited
             while(!stack.isEmpty() && letter < stack.peek() && counts[stack.peek() - 'a'] != 0){
                 int deleteIndex = stack.pop() - 'a';
                 visited[deleteIndex] = false;    
