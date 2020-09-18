@@ -16,7 +16,7 @@ public class RemoveDuplicatesLetters {
             counts[letter - 'a']++;
         }
         
-        // use stack to store solution
+        // Use stack of character to store final solution
         Stack<Character> stack = new Stack<>();
         
         
@@ -25,12 +25,12 @@ public class RemoveDuplicatesLetters {
             
             counts[index]--;
             
-            // if same character is seen
+            // If same character visited, skip
             if(visited[index]){
                 continue;
             }
             
-            // conditions to remove and marked visited
+            // Conditions to remove and marked visited
             while(!stack.isEmpty() && letter < stack.peek() && counts[stack.peek() - 'a'] != 0){
                 int deleteIndex = stack.pop() - 'a';
                 visited[deleteIndex] = false;    
