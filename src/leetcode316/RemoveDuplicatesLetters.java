@@ -7,7 +7,7 @@ public class RemoveDuplicatesLetters {
 		// number of current count of character
         int[] counts = new int[26];
         
-        // keep track if there is duplicates
+        // keep track of duplicates
         boolean[] visited = new boolean[26];
         
         char[] letters = s.toCharArray(); 
@@ -44,7 +44,7 @@ public class RemoveDuplicatesLetters {
         StringBuilder sb = new StringBuilder();
         
         while(!stack.isEmpty()){
-        	// since it is a stack
+        	// Insert from first index
             sb.insert(0, stack.pop());
         }
         
